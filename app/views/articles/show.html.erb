@@ -1,0 +1,25 @@
+<h1>Terrible article show page</h1>
+<h3><%= @article.name %></h1>
+
+<p> Article body: <%= @article.body %></p>
+
+<h2>Comments section</h2>
+<p>
+  <% @article.comments.each do |com| %>
+    <%= com.body.html_safe %>
+  <% end %>
+</p>
+
+
+<%= form_for @comment do |f| %>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  <br>
+
+  <%= f.label :body %>
+  <%= f.text_area :body, size: "60x12" %>
+
+  <%= f.hidden_field :article_id, value: @article.id %>
+
+  <%= f.submit "Create" %>
+<% end %>

@@ -1,0 +1,21 @@
+<h1>Some of the most effecient ActiveRecord Querying ever.</h1>
+
+<div class="stats-section">
+  <div>Most prolific author: <%= @prolific_author.name %> </div>
+  <div>Author with most upvoted article: <%= @author_with_most_upvoted_article %> </div>
+  <p style="text-decoration: underline">Five longest article names:</p>
+  <% @five_longest_article_names.each do |article| %>
+    <li> <%= article.name %> </li>
+  <% end %>
+
+  <p style="text-decoration: underline">Shortest articles:</p>
+  <% @short_articles.each do |article| %>
+    <li> <%= article.name %> </li>
+  <% end %>
+
+  <p style="text-decoration: underline">List of all the article names </p>
+  <% @article_names.each do |article| %>
+    <li><%= article.name %></li>
+  <% end %>
+  <%= will_paginate @article_names %>
+</div>
