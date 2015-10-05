@@ -8,7 +8,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'actionpack-action_caching'
-gem 'rails-observers', :git => 'git@github.com:rails/rails-observers.git'
+gem 'rails-observers'
 gem 'will_paginate'
 gem 'turbolinks'
 gem 'figaro'
