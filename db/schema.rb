@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20151002113010) do
     t.datetime "updated_at", null: false
   end
 
-
+  add_index "articles", ["author_id"], name: "index_articles_on_author_id"
 
 
   add_index "authors", ["id", "name"], name: "index_authors_on_id_and_name"
