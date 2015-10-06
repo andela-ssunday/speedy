@@ -22,9 +22,8 @@ ActiveRecord::Schema.define(version: 20151002113010) do
     t.integer  "upvotes"
   end
 
-  add_index "articles", ["author_id"], name: "index_articles_on_author_id"
 
-  
+
   create_table "authors", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -33,7 +32,7 @@ ActiveRecord::Schema.define(version: 20151002113010) do
 
 
 
-  add_index "authors", ["id", "name"], name: "index_authors_on_id_and_name"
+
 
   create_table "comments", force: :cascade do |t|
     t.string   "author"
