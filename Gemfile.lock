@@ -193,7 +193,7 @@ DEPENDENCIES
   actionpack-action_caching
   bullet
   coffee-rails (~> 4.1.0)
-  fabrication
+  fabrication (~> 2.2.3)
   faker
   figaro
   jbuilder (~> 2.0)
