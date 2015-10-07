@@ -22,7 +22,7 @@ class Author < ActiveRecord::Base
   end
 
   def self.with_most_upvoted_article
-    self.find_by_sql("select auth.name, art.upvotes as size from articles as art, authors as auth where art.author_id = auth.id group by auth.name order by size desc limit 1").first.name
+    self.find_by_sql("select auth.name, art.upvotes as size from articles as art, authors as auth where art.author_id = auth.id order by size desc limit 1").first.name
   end
 
 
