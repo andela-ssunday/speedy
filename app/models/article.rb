@@ -11,7 +11,7 @@ class Article < ActiveRecord::Base
   end
 
   def self.articles_with_names_less_than_20_char
-    self.find_by_sql("select name, length(name) as name_size from articles where name_size < 20 group by name")
+    self.find_by_sql("select name from articles where length(name) < 20 group by name")
   end
 
 end
