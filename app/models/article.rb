@@ -7,11 +7,11 @@ class Article < ActiveRecord::Base
   end
 
   def self.five_longest_article_names
-    self.find_by_sql("select name, length(name) as name_size from articles order by name_size desc limit 5")
+    self.find_by_sql("select name, length(name) as name_size from articles group by name order by name_size desc limit 5")
   end
 
   def self.articles_with_names_less_than_20_char
-    self.find_by_sql("select name, length(name) as name_size from articles where name_size < 20")
+    self.find_by_sql("select name, length(name) as name_size from articles where name_size < 20 group by name")
   end
 
 end
